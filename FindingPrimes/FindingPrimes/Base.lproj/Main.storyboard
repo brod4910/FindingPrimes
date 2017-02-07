@@ -21,40 +21,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is the number a Prime?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGS-6O-egm">
-                                <rect key="frame" x="16" y="82" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is it Prime?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGS-6O-egm">
+                                <rect key="frame" x="129" y="78" width="117" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="1F5-f8-m5u"/>
+                                    <constraint firstAttribute="height" constant="21" id="TyK-G9-vJn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mZh-gZ-O97">
-                                <rect key="frame" x="139" y="240" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. 18, 29" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mZh-gZ-O97">
+                                <rect key="frame" x="139" y="178" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gYg-uG-pZM"/>
+                                    <constraint firstAttribute="width" constant="97" id="jZc-Y5-h8e"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFD-h5-kUz">
-                                <rect key="frame" x="150" y="308" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFD-h5-kUz">
+                                <rect key="frame" x="150" y="231" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="n59-Gp-j7F"/>
+                                    <constraint firstAttribute="height" constant="30" id="ybQ-32-3rV"/>
+                                </constraints>
                                 <state key="normal" title="is it Prime?"/>
                                 <connections>
                                     <action selector="findPrime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GZH-G4-vTM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwX-aV-pFh">
-                                <rect key="frame" x="16" y="161" width="343" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suD-pg-aGD">
+                                <rect key="frame" x="16" y="127" width="343" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="5wO-1L-zZu"/>
+                                    <constraint firstAttribute="width" constant="343" id="8p7-CV-Aoa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sFD-h5-kUz" firstAttribute="top" secondItem="mZh-gZ-O97" secondAttribute="bottom" constant="23" id="6xa-p5-HJV"/>
+                            <constraint firstItem="DGS-6O-egm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Go-pv-ucF"/>
+                            <constraint firstItem="suD-pg-aGD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9z0-tO-jvB"/>
+                            <constraint firstItem="mZh-gZ-O97" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cz6-qi-nYL"/>
+                            <constraint firstItem="sFD-h5-kUz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gyf-QG-Ywk"/>
+                            <constraint firstItem="mZh-gZ-O97" firstAttribute="top" secondItem="suD-pg-aGD" secondAttribute="bottom" constant="22" id="hNS-GC-y3g"/>
+                            <constraint firstItem="DGS-6O-egm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="msy-W2-Zjz"/>
+                            <constraint firstItem="suD-pg-aGD" firstAttribute="top" secondItem="DGS-6O-egm" secondAttribute="bottom" constant="28" id="wrF-DT-5em"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="result" destination="WwX-aV-pFh" id="QpI-Du-Amm"/>
+                        <outlet property="result" destination="suD-pg-aGD" id="MSI-n8-Cs1"/>
                         <outlet property="userNumber" destination="mZh-gZ-O97" id="dV6-Yu-dwc"/>
                     </connections>
                 </viewController>
