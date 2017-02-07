@@ -18,30 +18,36 @@ class ViewController: UIViewController {
 	{
 		var isPrime = true;
 		
-		let userNum = Int(userNumber.text!)!
-		
-		if userNum > 1
+		if let userNum = Int(userNumber.text!)
 		{
-			for i in (2..<userNum)
+		
+			if userNum > 1
 			{
-				if userNum % i == 0
+				for i in (2..<userNum)
 				{
-					isPrime = false;
+					if userNum % i == 0
+					{
+						isPrime = false;
+					}
 				}
-			}
-			
-			if isPrime == true
-			{
-				result.text = "This is a prime number!";
+				
+				if isPrime == true
+				{
+					result.text = "This is a prime number!";
+				}
+				else
+				{
+					result.text = "This is not a prime number.";
+				}
 			}
 			else
 			{
-				result.text = "This is not a prime number.";
+				result.text = "Enter a number greater than 1.";
 			}
 		}
 		else
 		{
-			result.text = "Enter a number greater than 1.";
+			result.text = "Please enter a number.";
 		}
 	}
 	
